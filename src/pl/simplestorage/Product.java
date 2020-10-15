@@ -2,16 +2,19 @@ package pl.simplestorage;
 
 public abstract class Product implements Storage {
   
+  // product fields
   private int productId = 0;
   private String productName ="";
   private int productQty = 0;
   
+  // constructor
   public Product(int productId, String productName, int productQty)  {
     this.productId = productId;
     this.productName = productName;
     this.productQty = productQty;
   }
 
+  // getters and setters
   public int getProductId() {
     return productId;
   }
@@ -34,10 +37,6 @@ public abstract class Product implements Storage {
   
   public void setProductQty(int productQty) {
     this.productQty = productQty;
-  }
-  
-  public String showProduct() {
-    return "Id: " + this.getProductId() + " Name: " + this.getProductName() + " " + " Qty: " + this.getProductQty();
   }
 
 }

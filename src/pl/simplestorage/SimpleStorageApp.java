@@ -12,9 +12,8 @@ public class SimpleStorageApp {
     List<Product> storage = new ArrayList<Product>();
     Scanner scanner = new Scanner(System.in);
     int flag = 1;
-    int selection1 = 0;
-    int selection2 = 0;
-    int selection3 = 0;
+    int selector1 = 0;
+    int selector2 = 0;
     
     storage.add(new Milk(1, "Milk 1", 10, 3.2));
     storage.add(new Milk(2, "Milk 2", 10, 2));
@@ -28,20 +27,22 @@ public class SimpleStorageApp {
     storage.forEach(n -> System.out.println(n.showProduct()));
     
     System.out.println("\nAction: 1) Increase quantity 2) Decrease quantity 3) Exit");
-    selection1 = scanner.nextInt();
+    selector1 = scanner.nextInt();
     
-    if (selection1 == 1) {
+    if (selector1 == 1) {
       System.out.println("Input a product ID: ");
-      selection2 = scanner.nextInt();
+      selector1 = scanner.nextInt();
       System.out.println("Input value to increase product quantity: ");
-      selection3 = scanner.nextInt();
-      storage.get(selection2-1).addQty(selection3);
-    } else if (selection1 == 2) {
+      selector2 = scanner.nextInt();
+      storage.get(selector1-1).addQty(selector2);
+      selector1 = 1;
+    } else if (selector1 == 2) {
       System.out.println("Input a product ID: ");
-      selection2 = scanner.nextInt();
+      selector1 = scanner.nextInt();
       System.out.println("Input value to decrease product quantity: ");
-      selection3 = scanner.nextInt();
-      storage.get(selection2-1).removeQty(selection3);
+      selector2 = scanner.nextInt();
+      storage.get(selector1-1).removeQty(selector2);
+      selector1 = 2;
     } else {
       System.out.println("Bye Bye!");
       flag=0;
