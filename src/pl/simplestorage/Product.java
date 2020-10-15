@@ -1,6 +1,6 @@
 package pl.simplestorage;
 
-public abstract class Product {
+public abstract class Product implements Storage {
   
   private int productId = 0;
   private String productName ="";
