@@ -37,7 +37,7 @@ public class Milk extends Product {
   // show product full description
   @Override
   public String showProduct() {
-    return "Id: " + this.getProductId() + " \t Name: " + this.getProductName() + " \t Fat value: " + this.getFatValue() + " \t Qty: " + this.getProductQty();
+    return "Id: " + this.getProductId() + " \t Name : " + this.getProductName() + " \t Fat value: " + this.getFatValue() + " \t Qty: " + this.getProductQty();
   }
 
 
